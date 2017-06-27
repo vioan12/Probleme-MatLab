@@ -1,0 +1,16 @@
+syms x y
+f=x^3+log10(x)
+diff(f,x)
+g=x^2+x*y+y^2
+diff(g,x)
+diff(g,y)
+diff(f,x,2)
+%ezplot(f)
+%ezplot(g)
+jacobian([f;g],[x,y])
+limit(f,x,inf)
+limit(f,x,5,'right')
+limit(f,x,3,'left')
+int(f,x)
+int(g,y)
+int(f,x,3,50)
